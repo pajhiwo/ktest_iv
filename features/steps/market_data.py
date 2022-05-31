@@ -1,19 +1,23 @@
-import common_methods as common
+from common import common_methods
 from behave import *
 from datetime import datetime
 
 @given('API is accessible')
 def step_impl(context):
-    assert "online" in common.get_system_status()
+    assert "online" in common_methods.get_system_status()
 
 @when('we get server time')
 def step_impl(context):
-    context.time = common.get_server_time()
+    response = common_methods.get_server_time()
+    context.time = response.json()
     assert 'rfc1123' in context.time['result']
+    assert not context.time['error']
 
 @when('we retrieve "{pairs}" trading pair')
 def step_impl(context, pairs):
-    context.pairs_info = common.get_asset_pair(pairs)
+    response = common_methods.get_asset_pair(pairs)
+    context.pairs_info = response.json()
+    assert not context.pairs_info['error']
 
 @then('server time is correct!')
 def step_impl(context):

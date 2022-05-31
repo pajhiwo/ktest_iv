@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  k_test:
+    build: .
+    environment:
+    - API_URL=${API_URL}
+    - API_KEY=${API_KEY}
+    - API_SEC=${API_SEC}
+    - PASS_2FA=${PASS_2FA}
+    volumes:
+     - ./reports:/ktest/reports/
+    
+  

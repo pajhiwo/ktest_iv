@@ -1,0 +1,23 @@
+<testsuite name="market_data.Market data tests" tests="2" errors="0" failures="0" skipped="0" time="1.015743" timestamp="2022-05-31T18:07:53.407392" hostname="312a957ac976"><testcase classname="market_data.Market data tests" name="Check server time" status="passed" time="0.496806"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Check server time
+    Given API is accessible ... passed in 0.242s
+    When we get server time ... passed in 0.246s
+    Then server time is correct! ... passed in 0.008s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="market_data.Market data tests" name="Check Asset Pair" status="passed" time="0.518936"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Check Asset Pair
+    Given API is accessible ... passed in 0.246s
+    When we retrieve "XXBTZUSD" trading pair ... passed in 0.273s
+    Then "XXBTZUSD" info is available! ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
