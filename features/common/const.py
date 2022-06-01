@@ -1,0 +1,2 @@
+RESPONSE_HEADERS_MARKET_DATA = ['Date', 'Content-Type', 'Transfer-Encoding', 'Connection', 'strict-transport-security', 'cache-control', 'content-encoding', 'referrer-policy', 'Last-Modified', 'CF-Cache-Status', 'Expect-CT', 'Set-Cookie', 'Vary', 'Server', 'CF-RAY']
+RESPONSE_HEADERS_USER_DATA = ['Date', 'Content-Type', 'Transfer-Encoding', 'Connection', 'strict-transport-security', 'content-encoding', 'referrer-policy', 'CF-Cache-Status', 'Expect-CT', 'Set-Cookie', 'Server', 'CF-RAY']
